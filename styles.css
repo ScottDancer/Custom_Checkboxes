@@ -28,8 +28,23 @@
 }
 
 .custom-checkbox + label:hover::before {
-  background-color: #6E14E3;
+  background-color: #985AE8;
 }
+
+.custom-checkbox:focus + label::before {
+  box-shadow: 0 0 20px 0 black;
+}
+
+.custom-checkbox:checked + label::before {
+  content: '✔';
+   /* this is the css code for that: content: '\2714'; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #5BE309;
+   color: white;
+}
+
 .custom-checkbox:disabled + label {
   color: #aaa;
   cursor: not-allowed;
@@ -37,5 +52,5 @@
 
 .custom-checkbox:disabled + label::before {
   background-color: #ccc;
-  border-color: hsl(209, 13.4%, 37.5%) ;
+  border-color: hsl(209, 13.4%, 37.5%);
 }
